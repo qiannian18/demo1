@@ -31,10 +31,11 @@
 	</el-menu>
 </template>
 <script>
+	import bus from '../routes/eventBus.js'
 	export default {
 		data() {
 			return {
-				iscollapse: true
+				iscollapse: flase,
 			}
 		},
 		methods: {
@@ -46,9 +47,9 @@
 			}
 		},
 		mounted(){
-			 bus.$on("isleft",function(msg){
-				 console.log(msg)
-          //this.iscollapse=msg
+				bus.$on("isleft",function(msg){
+				
+				this.iscollapse=!msg
 		},
 		)}
 		

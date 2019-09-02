@@ -3,7 +3,7 @@
 	 text-color="#fff" active-text-color="#ffd04b" style="border: 0rem;">
 	 <el-menu-item>
 	 <template slot="title">
-		 <i class="el-icon-d-arrow-left" style="color:#ffd04b" @click="sendleft"></i>
+		 <i :class="isicon" style="color:#ffd04b" @click="sendleft()"></i>
 	 </template>
 	 </el-menu-item>
 		<el-submenu index="1" style="float: right; padding-right: 1.25rem;">
@@ -16,11 +16,13 @@
 </template>
 
 <script>
+	import bus from '../routes/eventBus.js'
 	export default {
 		data() {
 			return {
 				activeIndex: '1',
-				activeIndex2: '1'
+				activeIndex2: '1',
+				isicon:'el-icon-d-arrow-left'
 			};
 		},
 		methods: {
@@ -28,7 +30,9 @@
 				console.log(key, keyPath);
 			},
 			sendleft(){
-				   bus.$emit("isleft",false)
+					this.isicon=='el-icon-d-arrow-left' ? this.isicon='el-icon-d-arrow-right' :  this.isicon='el-icon-d-arrow-left'
+					bus.$emit("isleft",false);
+				   
 			}
 		}
 	}

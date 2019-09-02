@@ -1,7 +1,16 @@
 <template>
-	<div id="app">		
+	<div id="app">
+		<div style="flex-direction: column;background: #545c64;">
 			<myleft></myleft>
-			<myheader></myheader>
+		</div>
+		<div style="display: flex;flex-direction: column; flex-grow: 1;">
+			<div style="flex: row;background: black;">
+				<myheader></myheader>
+			</div>
+			<div style="flex-grow: 1;padding:1.25rem; overflow: auto;">
+				<router-view></router-view>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -21,12 +30,16 @@
 
 <style>
 	* {
-		margin: 0;
-		padding: 0;
+		box-sizing: border-box;
+		margin: 0rem;
+		padding: 0rem;
+
 	}
 
 	#app {
-		height: 100vh;
 		display: flex;
+		height: 100vh;
+		overflow:hidden;
 	}
+
 </style>

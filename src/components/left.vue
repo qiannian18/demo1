@@ -1,7 +1,7 @@
 <template>
-	<el-menu default-active="2" class="el-menu-vertical-demo" background-color="#545c64" text-color="#fff"
-	 active-text-color="#ffd04b" :collapse="iscollapse" style="border: 0;" router >
-		<el-menu-item index="1">
+	<el-menu default-active="1" class="el-menu-vertical-demo" background-color="#545c64" text-color="#fff"
+	 active-text-color="#ffd04b" :collapse="iscollapse" style="border: 0;" router>
+		<el-menu-item index="1" route="/home">
 			<i class="el-icon-menu"></i>
 			<span slot="title">首页</span>
 		</el-menu-item>
@@ -35,7 +35,7 @@
 	export default {
 		data() {
 			return {
-				iscollapse: flase,
+				iscollapse: true,
 			}
 		},
 		methods: {
@@ -46,19 +46,19 @@
 				console.log(key, keyPath);
 			}
 		},
-		mounted(){
-				bus.$on("isleft",function(msg){
-				
-				this.iscollapse=!msg
-		},
-		)}
-		
+		mounted() {
+			var isleft=this;
+			bus.$on("isleft", function(msg) {
+				isleft.iscollapse =!isleft.iscollapse;
+			}, )
+		}
+
 	}
 </script>
 
 <style scoped>
-  .el-menu-vertical-demo:not(.el-menu--collapse) {
-    width: 200px;
-    min-height: 400px;
-  }
+	.el-menu-vertical-demo:not(.el-menu--collapse) {
+		width: 200px;
+		min-height: 400px;
+	}
 </style>

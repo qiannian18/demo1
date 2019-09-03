@@ -1,7 +1,7 @@
 <template>
-	<el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#545c64"
+	<el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal"  background-color="#545c64"
 	 text-color="#fff" active-text-color="#ffd04b" style="border: 0rem;">
-	 <el-menu-item>
+	 <el-menu-item >
 	 <template slot="title">
 		 <i :class="isicon" style="color:#ffd04b" @click="sendleft()"></i>
 	 </template>
@@ -22,17 +22,14 @@
 			return {
 				activeIndex: '1',
 				activeIndex2: '1',
-				isicon:'el-icon-d-arrow-left'
+				isicon:'el-icon-d-arrow-right'
 			};
 		},
 		methods: {
-			handleSelect(key, keyPath) {
-				console.log(key, keyPath);
-			},
+			
 			sendleft(){
-					this.isicon=='el-icon-d-arrow-left' ? this.isicon='el-icon-d-arrow-right' :  this.isicon='el-icon-d-arrow-left'
 					bus.$emit("isleft",false);
-				   
+					this.isicon=='el-icon-d-arrow-left' ? this.isicon='el-icon-d-arrow-right' :  this.isicon='el-icon-d-arrow-left'   
 			}
 		}
 	}

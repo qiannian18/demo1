@@ -1,12 +1,12 @@
 <template>	
-		<div id="main" style="width: 100%;height: 25rem;"></div>
+		<div id="tbcharts" style="width: 100%;height: 25rem;"></div>
 </template>
 
 <script>
 	import echarts from "echarts"
 	export default {
 		mounted() {
-			var myChart = echarts.init(document.getElementById('main'));
+			var myChart = echarts.init(document.getElementById('tbcharts'));
 			// 指定图表的配置项和数据
 			var option = {
 				title: {

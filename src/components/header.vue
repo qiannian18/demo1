@@ -1,5 +1,5 @@
 <template>
-	<el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal"  background-color="#545c64"
+	<el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal"  background-color="#404040"
 	 text-color="#fff" active-text-color="#ffd04b" style="border: 0rem;">
 	 <el-menu-item >
 	 <template slot="title">

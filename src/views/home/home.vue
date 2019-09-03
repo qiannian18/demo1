@@ -57,7 +57,7 @@
 		<el-row :gutter="20" style="margin-top: 1.875rem;">
 			
 			<el-col :xl="12" :lg="12" :md="11" :sm="9" :xs="8">
-				 <el-card style="height: 28.125rem">
+				 <el-card style="height: 28.125rem;">
 
 					<tbcharts></tbcharts>
 
@@ -67,7 +67,7 @@
 
 			<el-col :xl="12" :lg="12" :md="11" :sm="9" :xs="8">
 				<el-card  style="height: 28.125rem">
-
+					<datacharts></datacharts>
 				</el-card>
 
 			</el-col>
@@ -80,7 +80,7 @@
 
 <script>
 	import {
-		tbcharts
+		tbcharts,datacharts
 	} from "./module"
 	
 	export default {
@@ -90,7 +90,8 @@
 			}
 		},
 		components: {
-			tbcharts
+			tbcharts,
+			datacharts
 		}
 	}
 </script>

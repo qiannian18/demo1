@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
 		
-		<div style="flex-direction: column;background: #545c64;overflow: hidden;">
+		<div style="flex-direction: column;background: #404040;overflow: hidden;">
 			<myleft></myleft>
 		</div>
 		<div style="display: flex;flex-direction: column; flex-grow: 1;overflow: hidden;">

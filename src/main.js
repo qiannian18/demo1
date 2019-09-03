@@ -6,6 +6,7 @@ Vue.config.productionTip = false
 
 Vue.use(ElementUI)
 import router from "./routes/router.js"
+import "./css/iconfont.css"
 
 new Vue({
 	router,

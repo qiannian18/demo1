@@ -22,7 +22,7 @@
 			return {
 				activeIndex: '1',
 				activeIndex2: '1',
-				isicon:'el-icon-d-arrow-right'
+				isicon:'el-icon-d-arrow-left'
 			};
 		},
 		methods: {

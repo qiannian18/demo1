@@ -8,6 +8,8 @@ Vue.use(ElementUI)
 import router from "./routes/router.js"
 import "./css/iconfont.css"
 
+
+
 new Vue({
 	router,
 	render: h => h(App),

@@ -22,14 +22,13 @@
 			return {
 				activeIndex: '1',
 				activeIndex2: '1',
-				isicon:'el-icon-d-arrow-left'
+				isicon:'el-icon-s-fold'
 			};
 		},
 		methods: {
-			
 			sendleft(){
 					bus.$emit("isleft",false);
-					this.isicon=='el-icon-d-arrow-left' ? this.isicon='el-icon-d-arrow-right' :  this.isicon='el-icon-d-arrow-left'   
+					this.isicon=='el-icon-s-unfold' ? this.isicon='el-icon-s-fold' :  this.isicon='el-icon-s-unfold'   
 			}
 		}
 	}

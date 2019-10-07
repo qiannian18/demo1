@@ -7,19 +7,18 @@
 		</el-menu-item>
 		<el-submenu index="2">
 			<template slot="title">
-				<i class="iconfont  icon-iconfonttaobao" style="font-size: 1.55rem;margin-right: 0.5125rem; color:#CDCD00;"></i>
-				<span>淘宝数据</span>
+				<i class="el-icon-edit" style="font-size: 1.55rem;margin-right: 0.5125rem; color:#CDCD00;"></i>
+				<span>文章管理</span>
 			</template>
 			<el-menu-item-group>
-				<el-menu-item index="2-1" route="/tblist">订单数据</el-menu-item>
-				<el-menu-item index="2-2">选项2</el-menu-item>
-				<el-menu-item index="2-3">选项3</el-menu-item>
+				<el-menu-item index="2-1" route="/tblist">文章列表</el-menu-item>
+				<el-menu-item index="2-2" route="/newarticle">写文章</el-menu-item>
 			</el-menu-item-group>
 		</el-submenu>
 		<el-submenu index="3">
 			<template slot="title">
-				<i class="iconfont icon-jingdong iconstyle" style="font-size: 1.55rem;margin-right: 0.5125rem; color:#CDCD00;"></i>
-				<span>京东数据</span>
+				<i class="el-icon-s-order" style="font-size: 1.55rem;margin-right: 0.5125rem; color:#CDCD00;"></i>
+				<span>分类管理</span>
 			</template>
 			<el-menu-item-group>
 				<el-menu-item index="3-1">选项1</el-menu-item>
@@ -30,8 +29,8 @@
 
 		<el-submenu index="4">
 			<template slot="title">
-				<i class="iconfont icon-pin" style="font-size: 1.55rem;margin-right: 0.5125rem; color:#CDCD00;"></i>
-				<span>拼多多数据</span>
+				<i class="el-icon-s-operation" style="font-size: 1.55rem;margin-right: 0.5125rem; color:#CDCD00;"></i>
+				<span>系统设置</span>
 			</template>
 			<el-menu-item-group>
 				<el-menu-item index="4-1">选项1</el-menu-item>

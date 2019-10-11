@@ -1,6 +1,6 @@
 <template>
-	<el-menu default-active="1" class="el-menu-vertical-demo" background-color="#404040" text-color="#fff"
-	 active-text-color="#ffd04b" :collapse="iscollapse" style="border: 0;" router>
+	<el-menu class="el-menu-vertical-demo" background-color="#404040" text-color="#fff" active-text-color="#ffd04b"
+	 :collapse="iscollapse" style="border: 0;" router :default-active="active">
 		<el-menu-item index="1" route="/home">
 			<i class="el-icon-menu"></i>
 			<span slot="title">首页</span>
@@ -18,24 +18,30 @@
 		<el-submenu index="3">
 			<template slot="title">
 				<i class="el-icon-s-order" style="font-size: 1.55rem;margin-right: 0.5125rem; color:#CDCD00;"></i>
-				<span>分类管理</span>
+				<span>板块管理</span>
 			</template>
 			<el-menu-item-group>
-				<el-menu-item index="3-1">选项1</el-menu-item>
-				<el-menu-item index="3-2">选项2</el-menu-item>
-				<el-menu-item index="3-3">选项3</el-menu-item>
+				<el-menu-item index="3-1" route="/addclass">板块分类</el-menu-item>
+			</el-menu-item-group>
+		</el-submenu>
+		
+		<el-submenu index="4">
+			<template slot="title">
+				<i class="el-icon-circle-check" style="font-size: 1.55rem;margin-right: 0.5125rem; color:#CDCD00;"></i>
+				<span>评论管理</span>
+			</template>
+			<el-menu-item-group>
+				<el-menu-item index="4-1" route="">审核评论</el-menu-item>
 			</el-menu-item-group>
 		</el-submenu>
 
-		<el-submenu index="4">
+		<el-submenu index="5">
 			<template slot="title">
 				<i class="el-icon-s-operation" style="font-size: 1.55rem;margin-right: 0.5125rem; color:#CDCD00;"></i>
 				<span>系统设置</span>
 			</template>
 			<el-menu-item-group>
-				<el-menu-item index="4-1">选项1</el-menu-item>
-				<el-menu-item index="4-2">选项2</el-menu-item>
-				<el-menu-item index="4-3">选项3</el-menu-item>
+				<el-menu-item index="5-1">选项1</el-menu-item>
 			</el-menu-item-group>
 		</el-submenu>
 
@@ -64,7 +70,9 @@
 			bus.$on("isleft", function(msg) {
 				isleft.iscollapse = !isleft.iscollapse;
 			}, )
-		}
+			console.log(this.active)
+		},
+		props: ["active"]
 	}
 </script>
 
